@@ -45,6 +45,10 @@ pub(crate) struct Cli {
     /// If we should autostart the game/profile combo. Skips the UI. Requires a game, profile is optional.
     #[arg(short, long, required = false)]
     autostart: bool,
+
+    /// Ignored arg to allow launching through Steam with --steamcmd %command%.
+    #[arg(short, long, required = false)]
+    steamcmd: Option<String>,
 }
 
 /// Function to get the supported game keys.
